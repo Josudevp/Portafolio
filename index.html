@@ -12,10 +12,10 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        .skill-card {
+        .skill-card, .project-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .skill-card:hover {
+        .skill-card:hover, .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
@@ -31,6 +31,7 @@
                 <a href="#about" class="hover:text-cyan-400 transition-colors duration-300">Sobre mí</a>
                 <a href="#education" class="hover:text-cyan-400 transition-colors duration-300">Educación</a>
                 <a href="#skills" class="hover:text-cyan-400 transition-colors duration-300">Habilidades</a>
+                <a href="#projects" class="hover:text-cyan-400 transition-colors duration-300">Proyectos</a>
                 <a href="#contact" class="hover:text-cyan-400 transition-colors duration-300">Contacto</a>
             </div>
             <div class="md:hidden">
@@ -127,6 +128,61 @@
                         <h4 class="text-xl font-semibold">Adaptabilidad</h4>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <h2 class="text-3xl font-bold text-center mb-12">Proyectos</h2>
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1 -->
+                <div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Nombre del Proyecto 1</h3>
+                        <p class="text-gray-400 mb-4">
+                            Una breve descripción de tu proyecto, los problemas que resuelve y las tecnologías utilizadas.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Java</span>
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Spring Boot</span>
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Nombre del Proyecto 2</h3>
+                        <p class="text-gray-400 mb-4">
+                            Una breve descripción de tu proyecto, los problemas que resuelve y las tecnologías utilizadas.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Kotlin</span>
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Android</span>
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Nombre del Proyecto 3</h3>
+                        <p class="text-gray-400 mb-4">
+                            Una breve descripción de tu proyecto, los problemas que resuelve y las tecnologías utilizadas.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">HTML</span>
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">CSS</span>
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agrega más tarjetas de proyectos aquí -->
+
             </div>
         </section>
 
