@@ -2,78 +2,207 @@
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <title>Portafolio | Josue Molina</title>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
+        /* Hover effect for cards */
         .skill-card, .project-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .skill-card:hover, .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-200">
 
-    <!-- Header & Navigation -->
+    <!-- ===== Header & Navigation ===== -->
     <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-white">J/M</a>
             <div class="hidden md:flex space-x-8">
                 <a href="#about" class="hover:text-cyan-400 transition-colors duration-300">Sobre mí</a>
-                <a href="#education" class="hover:text-cyan-400 transition-colors duration-300">Educación</a>
                 <a href="#skills" class="hover:text-cyan-400 transition-colors duration-300">Habilidades</a>
                 <a href="#projects" class="hover:text-cyan-400 transition-colors duration-300">Proyectos</a>
+                <a href="#education" class="hover:text-cyan-400 transition-colors duration-300">Educación</a>
                 <a href="#contact" class="hover:text-cyan-400 transition-colors duration-300">Contacto</a>
             </div>
+            <!-- Mobile menu button can be added here if needed -->
             <div class="md:hidden">
-                <!-- Mobile menu button can be added here -->
             </div>
         </nav>
     </header>
 
     <main class="container mx-auto px-6 py-12">
 
-        <!-- Hero Section -->
+        <!-- ===== Hero Section ===== -->
         <section id="hero" class="text-center py-20">
             <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">
                 Josue David Molina Perez
             </h1>
             <p class="text-xl md:text-2xl text-cyan-400 font-medium mb-8">
-                Estudiante de Ingeniería de Software & Futuro Desarrollador Full Stack
+                Estudiante de Ingeniería de Software & Desarrollador Full Stack
             </p>
+            <!-- Social Media Links -->
             <div class="flex justify-center space-x-6">
-                <a href="https://www.linkedin.com/in/josue-molinaP/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                <a href="https://www.linkedin.com/in/josue-molinaP/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn Profile">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
                 </a>
-                <a href="https://github.com/Josudevp" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                <a href="https://github.com/Josudevp" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="GitHub Profile">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                 </a>
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- ===== About Section ===== -->
         <section id="about" class="py-20">
             <h2 class="text-3xl font-bold text-center mb-12">Sobre Mí</h2>
             <div class="max-w-3xl mx-auto bg-gray-800 rounded-xl p-8 shadow-lg">
                 <p class="text-lg text-gray-300 leading-relaxed mb-4">
-                    Soy un apasionado estudiante de Ingeniería de Software. Mi objetivo es convertirme en un desarrollador <strong class="text-cyan-400">Full Stack</strong> especializado en el ecosistema <strong class="text-cyan-400">JVM (Java)</strong> y el framework <strong class="text-cyan-400">Vue.js</strong>.
+                    Soy un apasionado estudiante de Ingeniería de Software con el objetivo de convertirme en un desarrollador <strong class="text-cyan-400">Full Stack</strong> versátil y competente.
                 </p>
                 <p class="text-lg text-gray-300 leading-relaxed">
-                    Actualmente estoy en la fase de aprendizaje, dedicado a construir una base sólida con <strong class="text-cyan-400">Java</strong> y <strong class="text-cyan-400">Spring Boot</strong> para crear servicios robustos y escalables. Mi plan es expandir mis habilidades hacia el desarrollo frontend con <strong class="text-cyan-400">Vue</strong>, para poder construir aplicaciones completas y funcionales de principio a fin.
+                    Actualmente, estoy enfocado en profundizar mis conocimientos en el backend, construyendo una base sólida con los fundamentos de <strong class="text-cyan-400">Java</strong>. Paralelamente, estoy expandiendo mis horizontes aprendiendo <strong class="text-cyan-400">Python</strong> con <strong class="text-cyan-400">Django</strong>. Mi objetivo es complementar estas habilidades con el desarrollo frontend usando <strong class="text-cyan-400">Vue.js</strong>, para así poder construir aplicaciones completas y de alto rendimiento.
                 </p>
             </div>
         </section>
 
-        <!-- Education Section -->
+        <!-- ===== Skills Section ===== -->
+        <section id="skills" class="py-20">
+            <h2 class="text-3xl font-bold text-center mb-12">Habilidades</h2>
+            <div class="max-w-5xl mx-auto">
+                <!-- Technical Skills -->
+                <h3 class="text-2xl font-semibold text-center text-cyan-400 mb-10">Técnicas</h3>
+                <div class="grid md:grid-cols-3 gap-10 text-center">
+                    <!-- Frontend Column -->
+                    <div class="space-y-4">
+                        <h4 class="text-xl font-bold text-white">Frontend</h4>
+                        <div class="flex flex-wrap justify-center gap-3">
+                            <span class="bg-gray-700 font-medium px-4 py-2 rounded-full">HTML</span>
+                            <span class="bg-gray-700 font-medium px-4 py-2 rounded-full">CSS</span>
+                            <span class="bg-gray-700 font-medium px-4 py-2 rounded-full">JavaScript</span>
+                            <span class="bg-gray-700 font-medium px-4 py-2 rounded-full">Vue.js</span>
+                            <span class="bg-gray-700 font-medium px-4 py-2 rounded-full">Tailwind CSS</span>
+                        </div>
+                    </div>
+                    <!-- Backend Column -->
+                    <div class="space-y-4">
+                        <h4 class="text-xl font-bold text-white">Backend</h4>
+                        <div class="flex flex-wrap justify-center gap-3">
+                            <span class="bg-gray-700 font-medium px-4 py-2 rounded-full">Java</span>
+                            <span class="bg-gray-700 font-medium px-4 py-2 rounded-full">Python</span>
+                            <span class="bg-gray-700 font-medium px-4 py-2 rounded-full">Django</span>
+                        </div>
+                    </div>
+                    <!-- Databases & DevOps Column -->
+                    <div class="space-y-4">
+                        <h4 class="text-xl font-bold text-white">Bases de Datos & DevOps</h4>
+                        <div class="flex flex-wrap justify-center gap-3">
+                            <span class="bg-gray-700 font-medium px-4 py-2 rounded-full">SQL</span>
+                            <span class="bg-gray-700 font-medium px-4 py-2 rounded-full">Git & GitHub</span>
+                            <span class="bg-gray-700 font-medium px-4 py-2 rounded-full">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <h3 class="text-2xl font-semibold text-center text-cyan-400 mt-20 mb-10">Blandas</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center"><h4 class="text-xl font-semibold">Liderazgo</h4></div>
+                    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center"><h4 class="text-xl font-semibold">Trabajo en Equipo</h4></div>
+                    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center"><h4 class="text-xl font-semibold">Comunicación</h4></div>
+                    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center"><h4 class="text-xl font-semibold">Resolución de Problemas</h4></div>
+                    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center"><h4 class="text-xl font-semibold">Aprendizaje Rápido</h4></div>
+                    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center"><h4 class="text-xl font-semibold">Organización</h4></div>
+                    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center"><h4 class="text-xl font-semibold">Adaptabilidad</h4></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Projects Section ===== -->
+        <section id="projects" class="py-20">
+            <h2 class="text-3xl font-bold text-center mb-12">Proyectos</h2>
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1: To-Do App -->
+                <div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Gestor de Tareas (To-Do App)</h3>
+                        <p class="text-gray-400 mb-4">Aplicación Full Stack para crear, leer, actualizar y eliminar tareas. Un proyecto fundamental para demostrar el ciclo de vida de una aplicación.</p>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">HTML</span>
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">CSS</span>
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Java (API REST)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Blog Sencillo -->
+                <div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Blog Sencillo</h3>
+                        <p class="text-gray-400 mb-4">Un blog con autenticación de usuarios, donde se pueden crear, editar y ver posts. Demuestra el uso de bases de datos y la gestión de sesiones.</p>
+                    </div>
+                     <div class="p-6 pt-0">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Vue.js</span>
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Java</span>
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Sistema de Inventario -->
+                <div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Sistema de Gestión de Inventario</h3>
+                        <p class="text-gray-400 mb-4">Aplicación completa para gestionar productos, con funcionalidades de búsqueda, paginación y operaciones CRUD completas.</p>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Vue.js</span>
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Java</span>
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">JDBC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4: E-commerce API (Planned) -->
+                <div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden border-2 border-dashed border-gray-700 flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">API para E-commerce <span class="text-sm text-gray-500">(En Planificación)</span></h3>
+                        <p class="text-gray-400 mb-4">Próximo proyecto: desarrollar una API REST robusta para un e-commerce utilizando Python y Django Rest Framework, aplicando principios de diseño de API y contenedorización.</p>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Python</span>
+                            <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Django</span>
+                            <span class="bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== Education Section ===== -->
         <section id="education" class="py-20">
             <h2 class="text-3xl font-bold text-center mb-12">Educación</h2>
             <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
@@ -90,110 +219,11 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="py-20">
-            <h2 class="text-3xl font-bold text-center mb-12">Habilidades</h2>
-            <div class="max-w-5xl mx-auto">
-                <!-- Technical Skills -->
-                <h3 class="text-2xl font-semibold text-center text-cyan-400 mb-8">Técnicas</h3>
-                <div class="flex flex-wrap justify-center gap-4 mb-12">
-                    <span class="bg-gray-700 text-gray-200 text-lg font-medium px-4 py-2 rounded-full">HTML</span>
-                    <span class="bg-gray-700 text-gray-200 text-lg font-medium px-4 py-2 rounded-full">CSS</span>
-                    <span class="bg-gray-700 text-gray-200 text-lg font-medium px-4 py-2 rounded-full">JavaScript (Aprendiendo)</span>
-                    <span class="bg-gray-700 text-gray-200 text-lg font-medium px-4 py-2 rounded-full">Git</span>
-                    <span class="bg-gray-700 text-gray-200 text-lg font-medium px-4 py-2 rounded-full">Tailwind (Aprendiendo)</span>
-                    <span class="bg-gray-700 text-gray-200 text-lg font-medium px-4 py-2 rounded-full">Java (Aprendiendo)</span>
-                    <span class="bg-gray-700 text-gray-200 text-lg font-medium px-4 py-2 rounded-full">Spring Boot (Aprendiendo)</span>
-                    <span class="bg-gray-700 text-gray-200 text-lg font-medium px-4 py-2 rounded-full">Vue.js (Aprendiendo)</span>
-                    <span class="bg-gray-700 text-gray-200 text-lg font-medium px-4 py-2 rounded-full">SQL (Aprendiendo)</span>
-                </div>
-
-                <!-- Soft Skills -->
-                <h3 class="text-2xl font-semibold text-center text-cyan-400 mb-8">Blandas</h3>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center">
-                        <h4 class="text-xl font-semibold">Liderazgo</h4>
-                    </div>
-                    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center">
-                        <h4 class="text-xl font-semibold">Trabajo en Equipo</h4>
-                    </div>
-                    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center">
-                        <h4 class="text-xl font-semibold">Comunicación</h4>
-                    </div>
-                    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center">
-                        <h4 class="text-xl font-semibold">Resolución de Problemas</h4>
-                    </div>
-                    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center">
-                        <h4 class="text-xl font-semibold">Aprendizaje Rápido</h4>
-                    </div>
-                    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center">
-                        <h4 class="text-xl font-semibold">Organización</h4>
-                    </div>
-                    <div class="skill-card bg-gray-800 p-6 rounded-lg text-center">
-                        <h4 class="text-xl font-semibold">Adaptabilidad</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-20">
-            <h2 class="text-3xl font-bold text-center mb-12">Proyectos</h2>
-            <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Project Card 1: To-Do App -->
-                <div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Gestor de Tareas (To-Do App)</h3>
-                        <p class="text-gray-400 mb-4">
-                            Aplicación Full Stack para crear, leer, actualizar y eliminar tareas. Un proyecto fundamental para demostrar el ciclo de vida de una aplicación.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">HTML</span>
-                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">CSS</span>
-                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">JavaScript</span>
-                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Java (API REST en memoria)</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 2: Blog Sencillo -->
-                <div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Blog Sencillo</h3>
-                        <p class="text-gray-400 mb-4">
-                            Un blog con autenticación de usuarios, donde se pueden crear, editar y ver posts. Demuestra el uso de bases de datos y la gestión de sesiones.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Vue.js</span>
-                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Spring Boot</span>
-                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">SQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 3: Sistema de Inventario -->
-                <div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Sistema de Gestión de Inventario</h3>
-                        <p class="text-gray-400 mb-4">
-                            Aplicación completa para gestionar productos, con funcionalidades de búsqueda, paginación y operaciones CRUD completas.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Vue.js</span>
-                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Spring Boot</span>
-                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Spring Data JPA</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
+        <!-- ===== Contact Section ===== -->
         <section id="contact" class="py-20 text-center">
             <h2 class="text-3xl font-bold mb-4">Contáctame</h2>
-            <p class="text-lg text-gray-400 mb-8">
-                Siempre estoy abierto a nuevas oportunidades y colaboraciones.
+            <p class="text-lg text-gray-400 max-w-xl mx-auto mb-8">
+                Siempre estoy abierto a nuevas oportunidades, colaboraciones y desafíos. Si tienes alguna pregunta o simplemente quieres conectar, no dudes en escribirme.
             </p>
             <a href="mailto:jdevelop@gmail.com" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300 text-lg">
                 Enviar un correo
@@ -202,7 +232,7 @@
 
     </main>
 
-    <!-- Footer -->
+    <!-- ===== Footer ===== -->
     <footer class="bg-gray-800/50">
         <div class="container mx-auto px-6 py-6 text-center text-gray-400">
             <p>&copy; 2025 Josue David Molina Perez. Todos los derechos reservados.</p>
